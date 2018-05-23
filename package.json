@@ -10,6 +10,10 @@
   },
   "author": "李晶 <lijing@bingosoft.net>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bingo-oss/object2md"
+  },
   "dependencies": {
     "handlebars": "^4.0.11",
     "jsonfile": "^4.0.0",
