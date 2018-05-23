@@ -11,12 +11,16 @@
 
 ## 操作区
 
+|id|名称|个数限制|默认操作|
+|--|--|--|--|
 {{#each operations}}
-### {{@key}}:{{this.title}}
+|{{@key}}|{{this.title}}|{{#if this.maxSize}}{{this.maxSize}}{{else}}不限{{/if}}|{{#each this.defaultValue}}{{name}} {{/each}}
 {{/each}}
 
 ## 对外提供的上下文参数
 
+|id|名称|
+|--|--|
 {{#each exports}}
-### {{@key}}:{{this.title}}
+|{{@key}}|{{this.title}}|
 {{/each}}

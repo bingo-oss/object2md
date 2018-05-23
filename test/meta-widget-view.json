@@ -1,5 +1,6 @@
 {
     "id":"meta-widget-view",
+    "description":"视图部件用来展示业务实体的数据，支持数据的增删改查等基本操作",
     "widgetDef":"",
     "exports":{
         "selectedItem":{

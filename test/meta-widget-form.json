@@ -1,5 +1,6 @@
 {
 	"id": "meta-widget-form",
+	"description":"表单部件用来展示业务数据详情，支持数据修改等功能",
 	"widgetDef": "",
 	"exports": {
 		"form": {},
