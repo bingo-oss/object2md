@@ -1,7 +1,9 @@
 # object2md
 > 可以将任意的json定义文件转换为markdown文件
 > 
-> 支持外部自定义模板转换，使用handlebars语法
+> 支持外部自定义模板转换，使用[handlebars](http://handlebarsjs.com/)语法
+> 
+> 支持整个目录下的json文件批量转换，为了方便和性能，目前仅支持一级目录下所有json文件
 
 ## 安装命令
 
@@ -25,7 +27,38 @@ npm install object2md -g
   -h, --help     显示帮助信息                               
 
 示例：
-  object2md test/meta-widget-view.json
+  object2md test/meta-widget-view.json #转换一个文件
+  object2md test/                      #转换test目录下的所有json文件
+  object2md test/ -t my.handlebars                     #使用自定义的my.handlebars模板转换
 ```  
 
-## 
+## 自定义handlebars模板转换
+
+*假设你的test.json文件定义如下*
+
+```
+{
+  "id":"1",
+  "title":"hey,my friend"
+}
+```
+
+*那么转换模板my.handlebars可以这么写*
+
+```
+# id属性值{{id}}
+> 标题描述{{title}}
+```
+
+*运行*
+
+```
+object2md test.json -t my.handlebars
+```
+
+*在md-dist目录会生成同名文件，内容为*
+
+```
+# id属性值1
+> 标题描述hey,my friend
+```

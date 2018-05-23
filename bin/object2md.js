@@ -46,6 +46,9 @@ var type=argv.t
 //读取部件json配置转成md文件
 function writeMd(f){
     jsonfile.readFile(f, function(err, obj) {
+        if(err){
+            console.dir(err)
+        }
         var outputFile=path.join(outputDir,path.basename(f,path.extname(f)))
         outputFile=`${outputFile}.md`
         //读取部件的markdown模板定义文件
