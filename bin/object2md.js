@@ -23,7 +23,7 @@ var argv= yargs
         alias : 'type',
         demand: true,
         default:"widget",
-        describe: 'handlebars模板文件，定义json对象转换到markdown的模板，可由外部指定，内置widget类型，默认widget',
+        describe: 'handlebars模板文件，定义json对象转换到markdown的模板，可由外部指定（此时传入的是一个handlebars模板文件路径，模板的上下文就是输入的json对象），内置widget类型模板，默认值widget',
         type: 'string'
     })
     .usage('使用方式: object2md [存放json定义的文件路径] [选项组合]')
