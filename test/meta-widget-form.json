@@ -1,0 +1,75 @@
+{
+	"id": "meta-widget-form",
+	"widgetDef": "",
+	"exports": {
+		"form": {},
+		"metaEntity": {},
+		"selectedId": {},
+		"selectedItem": {}
+	},
+	"props": {
+		"form": {
+			"type": "form",
+			"require": true
+		},
+		"dataId": {
+			"type": "text",
+			"defaultValue": {
+				"from": "query",
+				"key": "id"
+			},
+			"require": false
+		},
+		"mode": {
+			"type": "status",
+			"defaultValue": {
+				"from": "query",
+				"key": "_action"
+			},
+			"require": false
+		}
+	},
+	"operations": {
+		"viewOperations": {
+			"title": "查看模式操作区",
+			"maxSize": 4,
+			"defaultValue": [
+				{
+					"operationType": "common",
+					"name": "edit",
+					"title": "编辑",
+					"icon": null,
+					"display": {"from": "formOpenEdit"}
+				}
+			]
+		},
+		"editOperations": {
+			"title": "编辑模式操作区",
+			"maxSize": 4,
+			"defaultValue": [
+				{
+					"operationType": "common",
+					"name": "goback",
+					"title": "取消",
+					"icon": null,
+					"btnType": "ghost",
+					"display": {"from": "formCancel"}
+				},
+				{
+					"operationType": "common",
+					"name": "save",
+					"title": "保存",
+					"icon": null,
+					"display": {"from": "formEdit"}
+				},
+				{
+					"operationType": "common",
+					"name": "del",
+					"title": "删除",
+					"icon": null,
+					"display": {"from": "formDel"}
+				}
+			]
+		}
+	}
+}

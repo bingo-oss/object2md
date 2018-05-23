@@ -1,0 +1,22 @@
+{
+  "name": "object2md",
+  "version": "0.0.1",
+  "description": "将javascript的json对象转换为Markdown文档",
+  "bin": {
+    "object2md": "./bin/object2md.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "李晶 <lijing@bingosoft.net>",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "jsonfile": "^4.0.0",
+    "yargs": "^11.0.0"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  }
+}

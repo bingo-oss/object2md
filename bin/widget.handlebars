@@ -1,0 +1,22 @@
+# 部件{{id}}文档说明
+> {{description}}
+
+## 部件属性
+
+|id|名称|类型|
+|--|--|--|
+{{#each props}}
+|{{@key}}|{{this.title}}|{{this.type}}
+{{/each}}
+
+## 操作区
+
+{{#each operations}}
+### {{@key}}:{{this.title}}
+{{/each}}
+
+## 对外提供的上下文参数
+
+{{#each exports}}
+### {{@key}}:{{this.title}}
+{{/each}}
